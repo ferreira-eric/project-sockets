@@ -20,7 +20,8 @@ public class ThreadClient extends Thread {
             String fileName = (String) inputStream.readObject();
 
             //path que está o arquivo
-            File file = new File("C:\\Users\\Eric Ferreira\\sourceJDK\\project-sockets\\src\\utils\\" + fileName);
+            String directoryPath = "C:\\Users\\Eric Ferreira\\sourceJDK\\project-sockets\\src\\utils\\";
+            File file = new File(directoryPath + fileName);
 
             if (file.exists() && !file.isDirectory()) {
                 // Leitura do arquivo solicitado
